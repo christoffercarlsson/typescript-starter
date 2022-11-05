@@ -1,7 +1,9 @@
 module.exports = {
   clearMocks: true,
   collectCoverage: true,
+  collectCoverageFrom: ['dist/src/**/*.js'],
   coverageDirectory: 'coverage',
+  coverageReporters: ['json', 'json-summary', 'lcov', 'text-summary'],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -10,5 +12,5 @@ module.exports = {
       statements: -10
     }
   },
-  testMatch: ['**/dist/tests/**/*.(test|spec).js']
+  testMatch: ['**/dist/tests/**/*.{test,spec}.js']
 }

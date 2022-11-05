@@ -8,9 +8,10 @@
   "type": "module",
   "exports": "./dist/src/index.js",
   "files": [
-    "dist/src/**/*.{js,ts}"
+    "dist/src/**/*.{js,ts,map}"
   ],
   "devDependencies": {
+    "@jest/globals": "^29.2.2",
     "@types/jest": "^29.2.2",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
@@ -32,6 +33,6 @@
     "build": "rimraf dist && tsc",
     "format": "prettier --loglevel silent --write .",
     "lint": "eslint .",
-    "test": "npm run build && NODE_OPTIONS='--experimental-vm-modules --no-warnings' npx jest"
+    "test": "npm run build && rimraf coverage && NODE_OPTIONS='--experimental-vm-modules --no-warnings' npx jest"
   }
 }
