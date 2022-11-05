@@ -9,7 +9,7 @@
     "outDir": "dist",
     "resolveJsonModule": true,
     "rootDir": ".",
-    "sourceMap": false,
+    "sourceMap": true,
     "target": "ES2020"
   },
   "include": ["./src/**/*", "./tests/**/*"]
