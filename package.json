@@ -8,7 +8,7 @@
   "type": "module",
   "exports": "./dist/src/index.js",
   "files": [
-    "dist/src/**/*.{js,ts,map}"
+    "dist/src/**/*.{js,ts}"
   ],
   "engines": {
     "node": ">=16.13.0"
