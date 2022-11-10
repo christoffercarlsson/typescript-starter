@@ -7,6 +7,13 @@
   "repository": "git://github.com/christoffercarlsson/typescript-starter.git",
   "type": "module",
   "exports": "./dist/src/index.js",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/src/*"
+      ]
+    }
+  },
   "files": [
     "dist/src/**/*.{js,ts}"
   ],
