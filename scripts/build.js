@@ -1,12 +1,17 @@
 import { build } from 'esbuild'
+import sourceMapPlugin from 'esbuild-plugin-exclude-vendor-source-maps'
 import { globby } from 'globby'
 import { exit } from 'process'
 
 const run = async () => {
   const sharedOptions = {
+    chunkNames: 'src/[hash]',
     format: 'esm',
     outbase: '.',
-    outdir: 'dist'
+    outdir: 'dist',
+    platform: 'node',
+    plugins: [sourceMapPlugin],
+    sourcemap: true
   }
   await build({
     ...sharedOptions,

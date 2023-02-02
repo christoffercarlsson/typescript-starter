@@ -14,6 +14,7 @@
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "esbuild": "^0.17.5",
+    "esbuild-plugin-exclude-vendor-source-maps": "^0.2.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",
@@ -41,7 +42,7 @@
     "url": "git+https://github.com/christoffercarlsson/typescript-starter.git"
   },
   "scripts": {
-    "build": "rimraf dist && node scripts/build.js && tsc src/index.ts --emitDeclarationOnly --declaration --outDir dist/src",
+    "build": "rimraf dist && node scripts/build.js && tsc --project tsconfig.typegen.json",
     "format": "prettier --loglevel silent --write .",
     "lint": "eslint .",
     "prepack": "npm run build",
